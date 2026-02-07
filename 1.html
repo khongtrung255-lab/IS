@@ -37,36 +37,36 @@ Put your HTML text here
                     t = (0, r.ref)(!1),
                     a = (0, r.ref)({
                         Ngày: 'N/A',
-                        Khoảng thời gian: 'N/A',
+                        KhoảngThờiGian: 'N/A',
                         Tuần: 'N/A'
                     }),
                     n = (0, r.ref)({
-                        攻略阶段: {
+                        GiaiĐoạnCôngLược: {
                             current: 0,
                             delta: 0
                         },
-                        当前位置: 'N/A',
-                        对user态度: 'N/A',
-                        警惕程度: {
+                        VịTríHiệnTại: 'N/A',
+                        TháiĐộĐốiVớiuser: 'N/A',
+                        MứcĐộCảnhGiác: {
                             current: 0,
                             delta: 0
                         },
-                        身体开放度: {
+                        SựCởiMởCủaCơThể: {
                             current: 0,
                             delta: 0
                         },
-                        是否怀孕: !1,
-                        婚姻状态: 'N/A'
+                        CóThai: !1,
+                        TìnhTrạngHônNhân: 'N/A'
                     }),
                     l = (0, r.ref)({
-                        身份状态: 'N/A',
+                        TrạngTháiNhậnDạng: 'N/A',
                         计划阶段: 'N/A',
                         与user好感: {
                             current: 0,
                             delta: 0
                         },
                         处女状态: !0,
-                        当前位置: 'N/A',
+                        VịTríHiệnTại: 'N/A',
                         情绪稳定度: {
                             current: 0,
                             delta: 0
@@ -78,13 +78,13 @@ Put your HTML text here
                         安诺入住: !1
                     }),
                     c = (0, r.ref)({
-                        当前位置: 'N/A',
+                        VịTríHiệnTại: 'N/A',
                         生理状态: 'N/A',
                         学业阶段: 'N/A'
                     }),
                     s = (0, r.ref)({
                         关系状态: 'N/A',
-                        是否怀孕: !1
+                        CóThai: !1
                     }),
                     d = (0, r.ref)({
                         发生过关系: !1
@@ -96,7 +96,7 @@ Put your HTML text here
                         }
                     }),
                     u = (0, r.computed)(() => {
-                        const e = n.value.攻略阶段.current;
+                        const e = n.value.GiaiĐoạnCôngLược.current;
                         return e <= 15 ? '寻常日子' : e <= 40 ? '隐约不安' : e <= 70 ? '刻意疏远' : e <= 100 ? '被迫妥协' : e <= 130 ? '内心动摇' : e <= 160 ? '欲拒还迎' : e <= 185 ? '口嫌体正' : '嘴硬到底'
                     }),
                     f = (0, r.computed)(() => {
@@ -407,7 +407,7 @@ Put your HTML text here
                         'data-theme': (0, r.unref)(t).theme
                     }, [(0, r.createElementVNode)('div', L, [(0, r.createElementVNode)('header', I, [(0, r.createElementVNode)('div', M, [l[3] || (l[3] = (0, r.createElementVNode)('span', {
                         class: 'time-label'
-                    }, 'TIME', -1)), (0, r.createElementVNode)('span', O, (0, r.toDisplayString)((0, r.unref)(t).time.星期) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.时段), 1)]), (0, r.createElementVNode)('button', {
+                    }, 'TIME', -1)), (0, r.createElementVNode)('span', O, (0, r.toDisplayString)((0, r.unref)(t).time.Tuần) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.Khoảng thời gia), 1)]), (0, r.createElementVNode)('button', {
                         type: 'button',
                         class: 'brand-block',
                         onClick: l[0] || (l[0] = (...e) => (0, r.unref)(t).toggleCollapse && (0, r.unref)(t).toggleCollapse(...e))
@@ -415,7 +415,7 @@ Put your HTML text here
                         class: 'brand-code'
                     }, '档案 MS-07', -1)), l[5] || (l[5] = (0, r.createElementVNode)('span', {
                         class: 'brand-title'
-                    }, '母上攻略', -1)), (0, r.createElementVNode)('span', j, (0, r.toDisplayString)((0, r.unref)(t).time.日期) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.星期) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.时段), 1)]), (0, r.createElementVNode)('div', P, [(0, r.createElementVNode)('button', {
+                    }, '母上攻略', -1)), (0, r.createElementVNode)('span', j, (0, r.toDisplayString)((0, r.unref)(t).time.Ngày) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.Tuần) + ' · ' + (0, r.toDisplayString)((0, r.unref)(t).time.Khoảng thời gia), 1)]), (0, r.createElementVNode)('div', P, [(0, r.createElementVNode)('button', {
                         type: 'button',
                         onClick: l[1] || (l[1] = (...e) => (0, r.unref)(t).toggleTheme && (0, r.unref)(t).toggleTheme(...e)),
                         class: 'ctrl-btn'
@@ -461,7 +461,7 @@ Put your HTML text here
                         }, '👤 你', -1)), (0, r.createElementVNode)('div', W, [(0, r.createVNode)(V, {
                             label: '位置'
                         }, {
-                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).user.当前位置), 1)]),
+                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).user.VịTríHiệnTại), 1)]),
                             _: 1
                         }), (0, r.createVNode)(V, {
                             label: '状态'
@@ -476,7 +476,7 @@ Put your HTML text here
                         }), (0, r.createVNode)(V, {
                             label: '时间段'
                         }, {
-                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).time.时段), 1)]),
+                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).time.Khoảng thời gia), 1)]),
                             _: 1
                         })])]), (0, r.createElementVNode)('div', Z, [l[10] || (l[10] = (0, r.createElementVNode)('div', {
                             class: 'block-title'
@@ -486,9 +486,9 @@ Put your HTML text here
                             default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).luYiyi.关系状态), 1)]),
                             _: 1
                         }), (0, r.createVNode)(V, {
-                            label: '陆依依是否怀孕'
+                            label: '陆依依CóThai'
                         }, {
-                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).luYiyi.是否怀孕 ? '是' : '否'), 1)]),
+                            default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).luYiyi.CóThai ? '是' : '否'), 1)]),
                             _: 1
                         }), (0, r.createVNode)(V, {
                             label: '蓉阿姨'
@@ -513,49 +513,49 @@ Put your HTML text here
                                 label: '攻略进度'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.攻略阶段.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.攻略阶段.delta
+                                    current: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(B, {
-                                current: (0, r.unref)(t).zhengYiyun.攻略阶段.current,
+                                current: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.current,
                                 max: 200,
                                 color: 'pink'
                             }, null, 8, ['current']), (0, r.createVNode)(V, {
                                 label: '态度'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.对user态度), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.TháiĐộĐốiVớiuser), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '警惕'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.警惕程度.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.警惕程度.delta
+                                    current: (0, r.unref)(t).zhengYiyun.MứcĐộCảnhGiác.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.MứcĐộCảnhGiác.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '开放度'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.身体开放度.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.身体开放度.delta
+                                    current: (0, r.unref)(t).zhengYiyun.SựCởiMởCủaCơThể.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.SựCởiMởCủaCơThể.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '位置'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.当前位置), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.VịTríHiệnTại), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '婚姻'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.婚姻状态), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.TìnhTrạngHônNhân), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
-                                label: '是否怀孕'
+                                label: 'CóThai'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.是否怀孕 ? '是' : '否'), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.CóThai ? '是' : '否'), 1)]),
                                 _: 1
                             })]),
                             _: 1
@@ -568,7 +568,7 @@ Put your HTML text here
                             default: (0, r.withCtx)(() => [(0, r.createVNode)(V, {
                                 label: '身份'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.身份状态), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.TrạngTháiNhậnDạng), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '计划'
@@ -598,7 +598,7 @@ Put your HTML text here
                             }), (0, r.createVNode)(V, {
                                 label: '位置'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.当前位置), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.VịTríHiệnTại), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '处女状态'
@@ -617,49 +617,49 @@ Put your HTML text here
                                 label: '攻略进度'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.攻略阶段.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.攻略阶段.delta
+                                    current: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(B, {
-                                current: (0, r.unref)(t).zhengYiyun.攻略阶段.current,
+                                current: (0, r.unref)(t).zhengYiyun.GiaiĐoạnCôngLược.current,
                                 max: 200,
                                 color: 'pink'
                             }, null, 8, ['current']), (0, r.createVNode)(V, {
                                 label: '态度'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.对user态度), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.TháiĐộĐốiVớiuser), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '警惕'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.警惕程度.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.警惕程度.delta
+                                    current: (0, r.unref)(t).zhengYiyun.MứcĐộCảnhGiác.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.MứcĐộCảnhGiác.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '开放度'
                             }, {
                                 default: (0, r.withCtx)(() => [(0, r.createVNode)(w, {
-                                    current: (0, r.unref)(t).zhengYiyun.身体开放度.current,
-                                    delta: (0, r.unref)(t).zhengYiyun.身体开放度.delta
+                                    current: (0, r.unref)(t).zhengYiyun.SựCởiMởCủaCơThể.current,
+                                    delta: (0, r.unref)(t).zhengYiyun.SựCởiMởCủaCơThể.delta
                                 }, null, 8, ['current', 'delta'])]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '位置'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.当前位置), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.VịTríHiệnTại), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '婚姻'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.婚姻状态), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.TìnhTrạngHônNhân), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
-                                label: '是否怀孕'
+                                label: 'CóThai'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.是否怀孕 ? '是' : '否'), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).zhengYiyun.CóThai ? '是' : '否'), 1)]),
                                 _: 1
                             })]),
                             _: 1
@@ -672,7 +672,7 @@ Put your HTML text here
                             default: (0, r.withCtx)(() => [(0, r.createVNode)(V, {
                                 label: '身份'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.身份状态), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.TrạngTháiNhậnDạng), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '计划'
@@ -702,7 +702,7 @@ Put your HTML text here
                             }), (0, r.createVNode)(V, {
                                 label: '位置'
                             }, {
-                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.当前位置), 1)]),
+                                default: (0, r.withCtx)(() => [(0, r.createTextVNode)((0, r.toDisplayString)((0, r.unref)(t).anno.VịTríHiệnTại), 1)]),
                                 _: 1
                             }), (0, r.createVNode)(V, {
                                 label: '处女状态'
@@ -713,7 +713,7 @@ Put your HTML text here
                             _: 1
                         }, 8, ['tag'])])])) : ((0, r.openBlock)(), (0, r.createElementBlock)('div', se, [(0, r.createElementVNode)('div', de, [l[11] || (l[11] = (0, r.createElementVNode)('div', {
                             class: 'block-title'
-                        }, '📅 时间', -1)), (0, r.createElementVNode)('div', ie, [(0, r.createElementVNode)('span', ue, (0, r.toDisplayString)((0, r.unref)(t).time.日期), 1)])])]))]))]),
+                        }, '📅 时间', -1)), (0, r.createElementVNode)('div', ie, [(0, r.createElementVNode)('span', ue, (0, r.toDisplayString)((0, r.unref)(t).time.Ngày), 1)])])]))]))]),
                         _: 1
                     }))]), l[12] || (l[12] = (0, r.createElementVNode)('footer', {
                         class: 'copyright-note'
@@ -745,19 +745,19 @@ Put your HTML text here
         }
 
         function ge(e, t, a) {
-            a.time.日期 = me(e, '时间.日期', 'N/A'), a.time.时段 = me(e, '时间.时段', 'N/A'), a.time.星期 = me(e, '时间.星期', 'N/A');
+            a.time.Ngày = me(e, '时间.Ngày', 'N/A'), a.time.Khoảng thời gia = me(e, '时间.Khoảng thời gia', 'N/A'), a.time.Tuần = me(e, '时间.Tuần', 'N/A');
             const n = me(e, '郑怡云', {}),
                 l = me(t, '郑怡云', {});
-            a.zhengYiyun.攻略阶段 = pe(me(n, '攻略阶段', 0), me(l, '攻略阶段', 0)), a.zhengYiyun.当前位置 = me(n, '当前位置', 'N/A'), a.zhengYiyun.对user态度 = me(n, '对user态度', 'N/A'), a.zhengYiyun.警惕程度 = pe(me(n, '警惕程度', 0), me(l, '警惕程度', 0)), a.zhengYiyun.身体开放度 = pe(me(n, '身体开放度', 0), me(l, '身体开放度', 0)), a.zhengYiyun.是否怀孕 = me(n, '是否怀孕', !1), a.zhengYiyun.婚姻状态 = me(n, '婚姻状态', 'N/A');
+            a.zhengYiyun.GiaiĐoạnCôngLược = pe(me(n, 'GiaiĐoạnCôngLược', 0), me(l, 'GiaiĐoạnCôngLược', 0)), a.zhengYiyun.VịTríHiệnTại = me(n, 'VịTríHiệnTại', 'N/A'), a.zhengYiyun.TháiĐộĐốiVớiuser = me(n, 'TháiĐộĐốiVớiuser', 'N/A'), a.zhengYiyun.MứcĐộCảnhGiác = pe(me(n, 'MứcĐộCảnhGiác', 0), me(l, 'MứcĐộCảnhGiác', 0)), a.zhengYiyun.SựCởiMởCủaCơThể = pe(me(n, 'SựCởiMởCủaCơThể', 0), me(l, 'SựCởiMởCủaCơThể', 0)), a.zhengYiyun.CóThai = me(n, 'CóThai', !1), a.zhengYiyun.TìnhTrạngHônNhân = me(n, 'TìnhTrạngHônNhân', 'N/A');
             const r = me(e, '安诺', {}),
                 o = me(t, '安诺', {});
-            a.anno.身份状态 = me(r, '身份状态', 'N/A'), a.anno.计划阶段 = me(r, '计划阶段', 'N/A'), a.anno.与user好感 = pe(me(r, '与user好感', 0), me(o, '与user好感', 0)), a.anno.处女状态 = me(r, '处女状态', !0), a.anno.当前位置 = me(r, '当前位置', 'N/A'), a.anno.情绪稳定度 = pe(me(r, '情绪稳定度', 0), me(o, '情绪稳定度', 0));
+            a.anno.TrạngTháiNhậnDạng = me(r, 'TrạngTháiNhậnDạng', 'N/A'), a.anno.计划阶段 = me(r, '计划阶段', 'N/A'), a.anno.与user好感 = pe(me(r, '与user好感', 0), me(o, '与user好感', 0)), a.anno.处女状态 = me(r, '处女状态', !0), a.anno.VịTríHiệnTại = me(r, 'VịTríHiệnTại', 'N/A'), a.anno.情绪稳定度 = pe(me(r, '情绪稳定度', 0), me(o, '情绪稳定度', 0));
             const c = me(e, '家庭', {});
             a.family.父母婚姻 = me(c, '父母婚姻', 'N/A'), a.family.家庭居住 = me(c, '家庭居住', 'N/A'), a.family.安诺入住 = me(c, '安诺入住', !1);
             const s = me(e, 'user', {});
-            a.user.当前位置 = me(s, '当前位置', 'N/A'), a.user.生理状态 = me(s, '生理状态', 'N/A'), a.user.学业阶段 = me(s, '学业阶段', 'N/A');
+            a.user.VịTríHiệnTại = me(s, 'VịTríHiệnTại', 'N/A'), a.user.生理状态 = me(s, '生理状态', 'N/A'), a.user.学业阶段 = me(s, '学业阶段', 'N/A');
             const d = me(e, '陆依依', {});
-            a.luYiyi.关系状态 = me(d, '关系状态', 'N/A'), a.luYiyi.是否怀孕 = me(d, '是否怀孕', !1), a.rongAyi.发生过关系 = me(e, '蓉阿姨.发生过关系', !1);
+            a.luYiyi.关系状态 = me(d, '关系状态', 'N/A'), a.luYiyi.CóThai = me(d, 'CóThai', !1), a.rongAyi.发生过关系 = me(e, '蓉阿姨.发生过关系', !1);
             const i = me(e, '凌小北', {}),
                 u = me(t, '凌小北', {});
             a.lingXiaobei.互动度 = pe(me(i, '互动度', 0), me(u, '互动度', 0))
@@ -1550,4 +1550,5 @@ Put your HTML text here
 
 <body>
     <div id="app"></div>
+
 </body>
